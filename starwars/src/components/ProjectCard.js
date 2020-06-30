@@ -2,7 +2,10 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 
-
+const Data = styled.div`
+border: 2px solid black;
+margin: 50px;
+`
 
 
 const ProjectCard = ({
@@ -17,8 +20,14 @@ const ProjectCard = ({
   surface,
   terrain,
 }) => {
+
+
+ 
+
+
+
   return (
-    <div>
+    <Data className = 'wrapper'>
       <h1>{name}</h1>
       <ul>Created : {created}</ul>
       <ul>Clinate : {climate}</ul>
@@ -29,7 +38,7 @@ const ProjectCard = ({
       <ul>Rotation : {rotation}</ul>
       <ul>Surface : {surface}</ul>
       <ul>Terrain : {terrain}</ul>
-    </div>
+    </Data>
   );
 };
 export default ProjectCard;
